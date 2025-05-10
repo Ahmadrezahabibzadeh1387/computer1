@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>معرفی رشته مهندسی کامپیوتر</title>
+<!-- <link rel="stylesheet" href="style.css"> -->
+<style>
+    :root{
+        --color: rgb(255, 255, 255);
+    }
+    
+     h2,p,h3{
+        font-family: calibri;
+    }
+    
+    body{
+        background-image: linear-gradient(to right,rgb(101, 36, 127),rgb(133, 0, 147));
+        margin: 0;
+        font-family: sans-serif;
+        justify-content: center;
+        align-items: center;
+    }
+    header {
+      background-color: #8e24aa;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      font-size: 35px;
+    }
+    header p {
+      font-size: 15px;
+    }
+    .login-button {
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+      background: white;
+      color: #8e24aa;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .login-button img {
+      width: 20px;
+      height: 20px;
+    
+  display: block;
+  margin: auto;
+}
+    nav {
+      background: #6a1b9a;
+      color: white;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0.5rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .contImg{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .main-title{
+        font-size: 60px;
+        -webkit-text-stroke: 2px;
+        -webkit-text-stroke-color: rgba(0, 200, 255, 0.651);
+        color: var(--color);
+        font-family: calibri;
+        transition: all 0.3s;
+        margin-bottom: 10px;
+        margin-top: 50px;
+        width: 750px;
+        height: 80px;
+        text-align: center;
+        font-weight: 900;
+    }
+   body h2{
+        transition: all 0.2s;
+        font-size: 45px;
+        font-family: calibri;
+        color: var(--color);
+    }
+    .main-title:hover , h2:hover , h3:hover{
+        text-shadow: 0 0 2rem rgb(131, 224, 255);
+        /* margin-top: 45px; */
+    }
+    .main-title:hover{
+        font-size: 62px;
+    
+    }
+    .title-two{
+        font-size: 45px;
+        font-family: calibri;
+        color: var(--color);
+    
+    }
+   body p{
+        font-size: 30px;
+        font-family: calibri;
+        color: var(--color);
+        text-align: center;
+        line-height: 50px;
+        word-spacing: 5px;
+        padding: 5px;
+        font-weight: 600;
+    }
+    .first-img{
+        width: 70%;
+        border-radius: 15%;
+        box-shadow: 0 0 15px rgb(252, 252, 252);
+        margin-top: 30px;
+        margin-bottom: 30px;
+    
+  display: block;
+  margin: auto;
+
+  display: block;
+  margin: auto;
+}
+    img{
+        transition: all 0.2s;
+        width: 70%;
+        border-radius: 15%;
+        box-shadow: 0 0 15px rgb(252, 252, 252);
+        margin-top: 30px;
+        margin-bottom: 30px;
+    
+  display: block;
+  margin: auto;
+}
+    img:hover{
+        transform: scale(1.02);
+        box-shadow: 0 0 3rem rgb(252, 252, 252);
+    }
+   body h3{
+        transition: all 0.2s;
+        font-size: 40px;
+        font-family: calibri;
+        color: var(--color);
+    }
+    
+    body::selection{
+        color: rgb(9, 255, 0);
+        background-color: #0059ff;
+    }
+    
+    ::-webkit-scrollbar{
+        width: 5px;
+    }
+    ::-webkit-scrollbar-thumb{
+        background-color: #b7f8ff;
+    }
+    ::-webkit-scrollbar-track{
+        background-color: #c300ff;
+    }
+    
+    .creat{
+        font-size: 60px;
+        font-family:cursive;
+        font-weight: 900;
+        color: rgb(255, 255, 255);
+        transition: all 0.4s;
+    }
+    
+    .creator{
+        visibility: hidden;
+        margin-top: -60px;
+        font-weight: 100;
+        font-family: "Calibri Light";
+        font-size: 40px;
+        opacity: 0;
+        transition: all 0.4s;
+        letter-spacing: 0px;
+        color: white;
+    }
+    
+    
+    .creat:hover{
+        color: aqua;
+        text-shadow: 0 0 2rem rgb(255, 255, 255);
+        transform: scale(1.2) translateY(-20px);
+    }
+    
+    .creat:hover + h1{
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(60px) scale(2);
+        letter-spacing: 5px;
+        color: rgb(255, 51, 0);
+        text-shadow: 0 0 2rem rgb(255, 255, 255);
+    
+    }
+@media (max-width: 768px) {
+  .main-title { font-size: 35px !important; width: 90% !important; }
+  h2, h3 { font-size: 25px !important; }
+  p { font-size: 18px !important; line-height: 1.8 !important; }
+  img, .first-img { width: 90% !important; 
+  display: block;
+  margin: auto;
+
+  display: block;
+  margin: auto;
+}
+}
+footer {
+      background: #4a148c;
+      color: white;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+    footer input, footer textarea {
+      width: 100%;
+      padding: 5px;
+      border-radius: 5px;
+      border: none;
+    }
+    footer button {
+      width: 100%;
+      background: white;
+      color: #6a1b9a;
+      padding: 8px;
+      border-radius: 5px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+    h2,p,h3{
+        font-family: calibri;
+        text-align: center;
+    }
+
+</style>
+</head>
+<body dir="rtl">
+    <header>
+        <a href="login1.htm">
+          <button class="login-button">
+            <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="آیکون ورود">
+            ورود
+          </button>
+        </a>
+        <h1>به سایت معرفی رشته کامپیوتر خوش آمدید!</h1>
+        <p>اینجا می‌توانید با رشته مهندسی کامپیوتر، آینده شغلی و مهارت‌های مورد نیاز آشنا شوید.</p>
+        <nav>
+          <a href="style.html">خانه</a>
+          <a href="#inja">تماس با ما</a>
+          <a href="#inja1">درباره ما</a>
+        </nav>
+      </header>
+
+
+<div class="contImg">
+</div>
+<div class="title">
+<h1 class="main-title">شاخه‌های مهندسی کامپیوتر؛ مسیرهای متنوع برای متخصص شدن</h1><br><br><br><br><br><br><br>
+<h2 class="title-two">مقدمه</h2><br><br>
+</div>
+<p>رشته مهندسی کامپیوتر بسیار گسترده است و به همین دلیل در طول تحصیل یا پس از آن، دانشجویان وارد شاخه‌های تخصصی‌تری می‌شوند. این زیرشاخه‌ها به افراد کمک می‌کند تا بر اساس علایق، استعدادها و آینده شغلی موردنظرشان، مسیر خود را مشخص کنند. در این بخش، مهم‌ترین گرایش‌ها و حوزه‌های تخصصی مهندسی کامپیوتر را بررسی می‌کنیم</p><br><br>
+<img class="first-img" src="8.jpg"/><br><br>
+<h2>نرم‌افزار (Software Engineering)</h2><br><br>
+<h3>شرح</h3><br><br>
+<p>در این گرایش، دانشجویان یاد می‌گیرند چگونه نرم‌افزارهای مختلف – از اپلیکیشن موبایل گرفته تا سیستم‌عامل – را طراحی، تحلیل، پیاده‌سازی و تست کنند</p><br><br>
+<h3>موضوعات مرتبط</h3><br><br>
+<p>زبان‌های برنامه‌نویسی (C++, Python, Java, ...)</p><br><br>
+<p>طراحی الگوریتم و ساختار داده
+</p><br><br>
+<p>تحلیل و طراحی سیستم‌ها</p><br><br>
+<p>تست نرم‌افزار و DevOps</p><br><br>
+<p>توسعه وب، موبایل و دسکتاپ</p><br>
+<br/>
+<img class="first-img" src="9.jpg"/><br>
+<br/>
+<h2>شغل‌های مرتبط</h2><br><br>
+<p>برنامه‌نویس، توسعه‌دهنده وب، مهندس نرم‌افزار، مدیر پروژه نرم‌افزاری</p><br><br>
+<h2>۲. سخت‌افزار (Computer Hardware Engineering)</h2><br><br>
+<h3>شرح</h3><br><br>
+<p>تمرکز این گرایش روی ساختار فیزیکی و معماری داخلی سیستم‌های کامپیوتری است</p><br><br>
+<h2>موضوعات مرتبط</h2><br><br>
+<p>مدارهای منطقی و دیجیتال</p><br><br>
+<p>طراحی پردازنده و حافظه</p><br><br>
+<p>زبان VHDL و Verilog</p><br><br>
+<p>سیستم‌های تعبیه‌شده (Embedded Systems)</p><br><br>
+<h2>شغل‌های مرتبط</h2><br><br>
+<p>طراح سخت‌افزار، توسعه‌دهنده سیستم‌های صنعتی، طراح FPGA</p><br><br>
+<h2>شبکه‌های کامپیوتری (Computer Networks)</h2><br><br>
+<h3>شرح</h3><br><br>
+<p>این گرایش مربوط به ارتباط بین کامپیوترها، انتقال داده، مدیریت ترافیک شبکه و امنیت آن‌هاست</p><br><br>
+<h3>موضوعات مرتبط</h3><br><br>
+<p>پروتکل‌های شبکه (TCP/IP, DNS, HTTP)</p><br><br>
+<p>معماری شبکه و طراحی توپولوژی</p><br><br>
+<p>شبکه‌های بی‌سیم و مخابرات داده</p><br><br>
+<p>امنیت شبکه و فایروال‌ها</p><br><br>
+<h3>شغل‌های مرتبط</h3><br><br>
+<p>مدیر شبکه، متخصص امنیت، تحلیل‌گر ترافیک، پشتیبان شبکه</p><br><br>
+<img class="first-img" src="10.jpg"/><br><br>
+<h2>هوش مصنوعی و یادگیری ماشین (Artificial Intelligence & Machine Learning)</h2><br><br>
+<h3>شرح</h3><br><br>
+<p>یکی از به‌روزترین و جذاب‌ترین گرایش‌ها که روی طراحی سیستم‌های هوشمند تمرکز دارد</p><br><br>
+<h3>موضوعات مرتبط</h3><br><br>
+<p>یادگیری ماشین (Machine Learning)</p><br><br>
+<p>بینایی ماشین و پردازش تصویر</p><br><br>
+<p>یادگیری عمیق (Deep Learning)</p><br><br>
+<p>پردازش زبان طبیعی (NLP)</p><br><br>
+<h3>شغل‌های مرتبط</h3><br><br>
+<p>تحلیل‌گر داده، متخصص AI، پژوهشگر رباتیک، توسعه‌دهنده مدل‌های یادگیری</p>
+<br/>
+<br/>
+<img class="first-img" src="11.jpg"/><br><br>
+<h2>امنیت سایبری (Cybersecurity)</h2><br>
+<br/>
+<h3>شرح</h3><br><br>
+<p>در دنیای دیجیتال امروز، حفظ امنیت اطلاعات، سیستم‌ها و ارتباطات بسیار حیاتی استدر دنیای دیجیتال امروز، حفظ امنیت اطلاعات، سیستم‌ها و ارتباطات بسیار حیاتی است</p><br><br>
+<h3>موضوعات مرتبط</h3><br><br>
+<p>رمزنگاری (Cryptography)</p><br><br>
+<p>تست نفوذ و هک اخلاقی (Penetration Testing)</p><br><br>
+<p>امنیت نرم‌افزار و شبکه</p><br><br>
+<p>تحلیل بدافزار و فایروال</p><br><br>
+<h3>شغل‌های مرتبط</h3><br><br>
+<p>تحلیل‌گر امنیت، کارشناس SOC، مهندس امنیت اطلاعات</p>
+<br/>
+<br/>
+  <footer>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; padding: 2rem; max-width: 1000px; margin: auto;">
+      <div style="flex: 1; min-width: 200px;">
+        <h4 id="inja1" style="font-size: 40px;">درباره ما</h4>
+        <p style="font-size: 20px;">سایت ما با هدف معرفی رشته مهندسی کامپیوتر و آشنایی با مهارت‌های لازم برای ورود به این حوزه راه‌اندازی شده است.</p>
+      </div>
+      <div style="flex: 1; min-width: 200px;">
+        <h4 id="inja" style="font-size: 40px;">تماس با ما</h4>
+        <form onsubmit="event.preventDefault(); alert('پیام شما ارسال شد!');" style="display: flex; flex-direction: column; gap: 20px;">
+          <input type="text" placeholder="نام شما" required>
+          <input type="email" placeholder="ایمیل شما" required>
+          <textarea placeholder="پیام شما" required></textarea>
+          <button type="submit">ارسال</button>
+        </form>
+      </div>
+    </div>
+    <p style="margin-top: 2rem; font-size: 20px;">&copy; 2025 سایت معرفی رشته کامپیوتر - تمامی حقوق محفوظ است.</p>
+  </footer>
+
+</body>
+</html>

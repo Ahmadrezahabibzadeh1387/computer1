@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="fontawesome-free-6.7.2-web/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<style>
+    #register{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    direction: rtl;
+    background: linear-gradient(to bottom,#83028f,#ffffff,#83028f);
+}
+.register{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px #000 ;
+    background: linear-gradient(to bottom,#fff,#fff,#fff);
+}
+h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+h1 i{
+    font-size: 60px;
+    margin-bottom: 10px;
+    color: blueviolet;
+}
+.input{
+    width: 350px;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    position: relative;
+}
+.input label{
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    color: #666;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+.input input{
+    width: 100%;
+    padding: 25px 15px 15px 15px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    z-index: 20;
+}
+.input input:focus + label,
+.input input:valid + label{
+    top: 10px;
+    font-size: 10px;
+}
+#show{
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    cursor: pointer;
+    z-index: 25;
+}
+.colorshow{
+    color: blueviolet;
+}
+#register button{
+    width: 100%;
+    border: none;
+    background-color: blueviolet;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.stop {
+    cursor: not-allowed !important;
+    pointer-events: none;
+    background-color: #999 !important;
+}
+#login{
+    color: #666;
+    text-decoration: underline;
+    font-size: 14px;
+}
+#passwordError{
+    width: 100%;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#passwordError strong{
+    margin-bottom: 10px;
+}
+#passwordError p {
+    color: #666;
+}
+.r {
+    color:red !important;
+}
+.g {
+    color:rgb(0, 153, 0) !important;
+}
+</style>
+<body>
+    <div id="register"> 
+        <form action="" class="register" onsubmit="return goToNextPage(event)">
+            <h1><i class="fa-solid fa-lock"></i>فرم ثبت نام</h1>
+           <div class="input">
+            <input type="text" id="username" required>
+            <label for="username">نام کاربری</label>
+           </div>
+            <div class="input"> 
+                <input type="password" id="password" required onkeyup="checkpassword()">
+            <label for="password">کلمه عبور</label>
+            <i class="fa-solid fa-eye" id="show" onclick="showpassword()"></i>
+            </div>
+            <div id="passwordError">
+                <strong>کلمه عبور باید شامل:</strong>
+                <p id="er1"><i id="er1i" class="fa-regular fa-circle-xmark"></i> حداقل 8 کاراکتر</p>
+                <p id="er2"><i id="er2i" class="fa-regular fa-circle-xmark"></i> حداقل یک کاراکتر بزرگ</p>
+                <p id="er3"><i id="er3i" class="fa-regular fa-circle-xmark"></i> یک کاراکتر خاص شامل : @ # $</p>
+            </div>
+            <button id="submit" class="stop"><i class="fa-solid fa-right-to-bracket"></i>ثبت نام</button>
+            <a href="style.html" id="login">عضوهستم!</a>
+        </form>
+    </div>
+    <script>
+        function showpassword(){
+    const password = document.getElementById("password");
+    const show = document.getElementById("show");
+    if (password.type === "password") {
+        password.type = "text";
+        show.classList.remove("fa-eye");
+        show.classList.add("fa-eye-slash");
+        show.classList.add("colorshow");
+
+    }
+    else{
+        password.type = "password";
+        show.classList.add("fa-eye");
+        show.classList.remove("fa-eye-slash");
+         show.classList.remove("colorshow");
+    }
+}
+function checkpassword() {
+    const password = document.getElementById("password").value;
+    const submit = document.getElementById("submit");
+
+    const er1 = document.getElementById("er1");
+    const er2 = document.getElementById("er2");
+    const er3 = document.getElementById("er3");
+
+    const er1i = document.getElementById("er1i");
+    const er2i = document.getElementById("er2i");
+    const er3i = document.getElementById("er3i");
+
+    submit.classList.add("stop");
+    
+    er1.classList.add("r");
+    er1.classList.remove("g");
+    er1i.classList.add("fa-circle-xmark");
+    er1i.classList.remove("fa-circle-check");
+
+    er2.classList.add("r");
+    er2.classList.remove("g");
+    er2i.classList.add("fa-circle-xmark");
+    er2i.classList.remove("fa-circle-check");
+
+    er3.classList.add("r");
+    er3.classList.remove("g");
+    er3i.classList.add("fa-circle-xmark");
+    er3i.classList.remove("fa-circle-check");
+
+    if(password.length >= 8) {
+        er1.classList.remove("r");
+        er1.classList.add("g");
+        er1i.classList.remove("fa-circle-xmark");
+        er1i.classList.add("fa-circle-check");
+    }
+
+    if(password.search(/[A-Z]/) > 0) {
+        er2.classList.remove("r");
+        er2.classList.add("g");
+        er2i.classList.remove("fa-circle-xmark");
+        er2i.classList.add("fa-circle-check");
+    }
+
+    if(password.search(/[@|#|$]/) > 0) {
+        er3.classList.remove("r");
+        er3.classList.add("g");
+        er3i.classList.remove("fa-circle-xmark");
+        er3i.classList.add("fa-circle-check");
+    }
+
+    if(password.length >= 8 &&
+       password.search(/[A-Z]/) > 0 &&
+       password.search(/[@|#|$]/) > 0
+    ){
+        submit.classList.remove("stop");
+        
+
+    }
+}
+function goToNextPage(event) {
+    const password = document.getElementById("password").value;
+    if(password.length >= 8 &&
+       password.search(/[A-Z]/) > 0 &&
+       password.search(/[@|#|$]/) > 0
+    ){
+        window.location.href="style.html";
+    }
+    else{
+        alert("رمزعبورمعتبرنیست.")
+    }
+    return false;
+}
+    </script>
+</body>
+</html>

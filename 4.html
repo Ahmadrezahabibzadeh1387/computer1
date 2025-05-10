@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html lang="fa">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>سایت معرفی رشته کامپیوتر</title>
+<!-- <link rel="stylesheet" href="style.css"> -->
+<style>
+    :root{
+        --color: rgb(255, 255, 255);
+    }
+    
+     h2,p,h3{
+        font-family: calibri;
+    }
+    
+    body{
+        background-image: linear-gradient(to right,rgb(101, 36, 127),rgb(133, 0, 147));
+        margin: 0;
+        font-family: sans-serif;
+        justify-content: center;
+        align-items: center;
+    }
+    header {
+      background-color: #8e24aa;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      font-size: 35px;
+    }
+    header p {
+      font-size: 15px;
+    }
+    .login-button {
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+      background: white;
+      color: #8e24aa;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .login-button img {
+      width: 20px;
+      height: 20px;
+    
+  display: block;
+  margin: auto;
+}
+    nav {
+      background: #6a1b9a;
+      color: white;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0.5rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .contImg{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .main-title{
+        font-size: 60px;
+        -webkit-text-stroke: 2px;
+        -webkit-text-stroke-color: rgba(0, 200, 255, 0.651);
+        color: var(--color);
+        font-family: calibri;
+        transition: all 0.3s;
+        margin-bottom: 10px;
+        margin-top: 50px;
+        width: 750px;
+        height: 80px;
+        text-align: center;
+        font-weight: 900;
+    }
+   body h2{
+        transition: all 0.2s;
+        font-size: 45px;
+        font-family: calibri;
+        color: var(--color);
+    }
+    .main-title:hover , h2:hover , h3:hover{
+        text-shadow: 0 0 2rem rgb(131, 224, 255);
+        /* margin-top: 45px; */
+    }
+    .main-title:hover{
+        font-size: 62px;
+    
+    }
+    .title-two{
+        font-size: 45px;
+        font-family: calibri;
+        color: var(--color);
+    
+    }
+   body p{
+        font-size: 30px;
+        font-family: calibri;
+        color: var(--color);
+        text-align: center;
+        line-height: 50px;
+        word-spacing: 5px;
+        padding: 5px;
+        font-weight: 600;
+    }
+    .first-img{
+        width: 70%;
+        border-radius: 15%;
+        box-shadow: 0 0 15px rgb(252, 252, 252);
+        margin-top: 30px;
+        margin-bottom: 30px;
+    
+  display: block;
+  margin: auto;
+
+}
+    img{
+        transition: all 0.2s;
+        width: 70%;
+        border-radius: 15%;
+        box-shadow: 0 0 15px rgb(252, 252, 252);
+        margin-top: 30px;
+        margin-bottom: 30px;
+    
+  display: block;
+  margin: auto;
+}
+    img:hover{
+        transform: scale(1.02);
+        box-shadow: 0 0 3rem rgb(252, 252, 252);
+    }
+   body h3{
+        transition: all 0.2s;
+        font-size: 40px;
+        font-family: calibri;
+        color: var(--color);
+    }
+    
+    body::selection{
+        color: rgb(9, 255, 0);
+        background-color: #0059ff;
+    }
+    
+    ::-webkit-scrollbar{
+        width: 5px;
+    }
+    ::-webkit-scrollbar-thumb{
+        background-color: #b7f8ff;
+    }
+    ::-webkit-scrollbar-track{
+        background-color: #c300ff;
+    }
+    
+    .creat{
+        font-size: 60px;
+        font-family:cursive;
+        font-weight: 900;
+        color: rgb(255, 255, 255);
+        transition: all 0.4s;
+    }
+    
+    .creator{
+        visibility: hidden;
+        margin-top: -60px;
+        font-weight: 100;
+        font-family: "Calibri Light";
+        font-size: 40px;
+        opacity: 0;
+        transition: all 0.4s;
+        letter-spacing: 0px;
+        color: white;
+    }
+    
+    
+    .creat:hover{
+        color: aqua;
+        text-shadow: 0 0 2rem rgb(255, 255, 255);
+        transform: scale(1.2) translateY(-20px);
+    }
+    
+    .creat:hover + h1{
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(60px) scale(2);
+        letter-spacing: 5px;
+        color: rgb(255, 51, 0);
+        text-shadow: 0 0 2rem rgb(255, 255, 255);
+    
+    }
+@media (max-width: 768px) {
+  .main-title { font-size: 35px !important; width: 90% !important; }
+  h2, h3 { font-size: 25px !important; }
+  p { font-size: 18px !important; line-height: 1.8 !important; }
+  img, .first-img { width: 90% !important; 
+  display: block;
+  margin: auto;
+
+  display: block;
+  margin: auto;
+}
+}
+footer {
+      background: #4a148c;
+      color: white;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+    footer input, footer textarea {
+      width: 100%;
+      padding: 5px;
+      border-radius: 5px;
+      border: none;
+    }
+    footer button {
+      width: 100%;
+      background: white;
+      color: #6a1b9a;
+      padding: 8px;
+      border-radius: 5px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+    h2,p,h3{
+        font-family: calibri;
+        text-align: center;
+        font-size: 30px;
+    }
+.ac{
+    display: block;
+    font-family: calibri;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+</style>
+</head>
+<body dir="rtl">
+    <header>
+        <a href="login1.htm">
+          <button class="login-button">
+            <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="آیکون ورود">
+            ورود
+          </button>
+        </a>
+        <h1>به سایت معرفی رشته کامپیوتر خوش آمدید!</h1>
+        <p>اینجا می‌توانید با رشته مهندسی کامپیوتر، آینده شغلی و مهارت‌های مورد نیاز آشنا شوید.</p>
+        <nav>
+          <a href="style.html">خانه</a>
+          <a href="#inja">تماس با ما</a>
+          <a href="#inja1">درباره ما</a>
+        </nav>
+      </header>
+
+
+<div class="contImg">
+</div>
+<div class="title">
+<h1 class="main-title">چه چیزهایی باید بلد باشیم؟ مسیر یادگیری و مهارت‌آموزی در مهندسی کامپیوتر</h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h2 class="title-two">مقدمه</h2><br><br>
+</div>
+<p>رشته مهندسی کامپیوتر تنها به یادگیری دروس دانشگاهی محدود نمی‌شود. برای موفقیت در این حوزه، ترکیبی از دانش نظری، مهارت عملی و تجربه پروژه‌ای لازم است. در این بخش به بررسی دقیق مهارت‌های ضروری، سرفصل‌های مهم دانشگاهی و منابع یادگیری مفید می‌پردازیم</p><br><br>
+<img class="first-img" src="12.jpg"/><br><br>
+<h2>مهارت‌های اصلی مورد نیاز برای دانشجویان رشته کامپیوتر</h2><br><br>
+<h3>برنامه‌نویسی</h3><br><br>
+<p>توانایی نوشتن کدهای صحیح، تمیز و بهینه
+
+    آشنایی با زبان‌هایی مانند Python، C++، JavaScript، Java
+    
+    درک مفاهیم شیء‌گرایی، الگوریتم‌ها، خطایابی</p><br><br>
+<h3>تفکر الگوریتمی و حل مسئله</h3><br><br>
+<p>طراحی راه‌حل‌های بهینه برای مسائل مختلف
+
+    شرکت در مسابقات الگوریتمی (مثل ACM یا Codeforces)</p><br><br>
+<h3>کار با سیستم‌عامل‌ها و ترمینال</h3>
+<p>آشنایی با لینوکس، دستورات Shell، مدیری<br><br>ت فایل‌ها</p>
+<h3>درک پایگاه‌داده و SQL</h3><br><br>
+<p>طراحی بانک‌های اطلاعاتی، انجام پرس‌وجو و تحلیل داده</p><br>
+<br/>
+<img class="first-img" src="13.jpg"/><br>
+<br/>
+<h2>مهارت‌های نرم‌افزاری دیگر</h2><br><br>
+<p>کنترل نسخه (Git)، کار تیمی در GitHub
+
+    مهارت کار با IDEها (Visual Studio Code، PyCharm، IntelliJ و ...)
+    
+    حتماً! جدول دروس دانشگاهی رو برات به صورت متن کامل و قابل استفاده در صفحه HTML می‌نویسم</p><br><br>
+<h2>مهم‌ترین دروس دانشگاهی در رشته مهندسی کامپیوتر
+    برنامه‌نویسی پیشرفته</h2><br><br>
+<p>این درس پایه‌ی بسیاری از مهارت‌های عملی در رشته کامپیوتر است. دانشجویان با مفاهیم پیشرفته زبان‌های برنامه‌نویسی مانند توابع بازگشتی، اشاره‌گرها، فایل‌ها و کلاس‌ها آشنا می‌شوند.
+    ساختمان داده‌ها
+    در این درس، دانشجو یاد می‌گیرد که چگونه داده‌ها را به‌گونه‌ای ساختاربندی کند که پردازش آن‌ها سریع‌تر و بهینه‌تر انجام شود. مباحثی مانند لیست‌های پیوندی، درخت‌ها، گراف‌ها و صف‌ها بررسی می‌شوند.
+    طراحی الگوریتم‌ها
+    این درس روی طراحی و تحلیل الگوریتم‌های کارآمد تمرکز دارد. دانشجو می‌آموزد چگونه برای مسائل مختلف راه‌حل‌هایی با کمترین زمان و حافظه پیدا کند.
+    مدارهای منطقی
+    یکی از پایه‌های سخت‌افزاری این رشته، مدارهای منطقی است. در این درس با گیت‌های منطقی، جبر بول، فلیپ‌فلاپ‌ها و طراحی مدارات دیجیتال آشنا می‌شویم.
+    معماری کامپیوتر
+    دانشجو در این درس با ساختار داخلی سیستم‌های کامپیوتری، واحد کنترل، مسیر داده و روش‌های اجرای دستورالعمل‌ها آشنا می‌شود.
+    سیستم‌عامل
+    این درس نحوه مدیریت منابع یک سیستم مانند حافظه، پردازنده، فایل‌ها و فرایندها توسط سیستم‌عامل را بررسی می‌کند. مفاهیمی مانند زمان‌بندی، همزمانی، بن‌بست و مدیریت حافظه جزو مباحث اصلی هستند.
+    پایگاه داده
+    یکی از دروس کاربردی که به طراحی، پیاده‌سازی و کار با بانک‌های اطلاعاتی می‌پردازد. دانشجو با زبان SQL، مدل رابطه‌ای و مفاهیم جامع‌تری چون نرمال‌سازی آشنا می‌شود.
+    شبکه‌های کامپیوتری
+    در این درس، مباحثی مثل مدل‌های شبکه (مانند OSI و TCP/IP)، پروتکل‌های ارتباطی، IP، DNS، امنیت پایه و طراحی توپولوژی‌های مختلف تدریس می‌شود.
+    مهندسی نرم‌افزار
+    این درس فرآیند توسعه نرم‌افزارهای بزرگ و قابل نگهداری را از تحلیل نیازمندی‌ها تا تست نهایی پوشش می‌دهد. مفاهیم طراحی شیءگرا، نمودارهای UML، متدولوژی‌های چابک و Scrum از موضوعات مهم آن هستند.
+    الان بخش کاملاً متنی شد و راحت می‌تونی ازش در فایل HTML استفاده کنی.
+    آماده‌ای برای بخش ۵ (بازار کار و فرصت‌های شغلی)؟</p><br><br>
+
+<h2>منابع یادگیری کاربردی برای پیشرفت بیشتر</h2><br><br>
+<h3>سایت‌های آموزشی</h3><br><br>
+<a class="ac" href="
+Coursera.org">
+  Coursera.org</a><br>
+<a class="ac" href="
+Udemy.com">
+    Udemy.com</a><br>
+<a class="ac" href="
+FreeCodeCamp.org">
+FreeCodeCamp.org</a><br>
+<a class="ac" href="
+W3Schools.com
+">
+W3Schools.com
+</a><br>
+<a class="ac" href="
+GeeksforGeeks.org">
+GeeksforGeeks.org</a><br>
+<h3>منابع فارسی</h3><br><br>
+<p>مکتب‌خونه (maktabkhooneh.org)</p><br><br>
+<p>فرادرس (faradars.org)</p><br><br>
+<p>راکت، تاپلرن، سبزلرن</p><br><br>
+<h3>کتاب‌های پیشنهادی</h3><br><br>
+<p>"مقدمه‌ای بر الگوریتم‌ها" (CLRS)
+
+    "سیستم‌عامل تننباوم"
+    
+    "کامپیوتر از صفر تا یک" اثر Nand2Tetris
+    
+    "یادگیری ماشین" اثر Mitchell</p><br><br>
+
+
+<img class="first-img" src="14.jpg"/><br><br>
+
+<h2>جمع‌بندی</h2><br>
+<br/>
+<p>در مهندسی کامپیوتر، صرفاً قبولی در امتحانات کافی نیست. موفقیت در این رشته نیاز به تلاش مداوم، تمرین عملی و پیگیری فناوری‌های روز دارد. هر دانشجو باید علاوه بر دروس دانشگاهی، پروژه‌های واقعی انجام دهد، در دوره‌های تخصصی شرکت کند و مدام مهارت‌هایش را به‌روز نگه دارد</p>
+<br/>
+<br/>
+  <footer>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; padding: 2rem; max-width: 1000px; margin: auto;">
+      <div style="flex: 1; min-width: 200px;">
+        <h4 id="inja1" style="font-size: 40px;">درباره ما</h4>
+        <p style="font-size: 20px;">سایت ما با هدف معرفی رشته مهندسی کامپیوتر و آشنایی با مهارت‌های لازم برای ورود به این حوزه راه‌اندازی شده است.</p>
+      </div>
+      <div style="flex: 1; min-width: 200px;">
+        <h4 id="inja" style="font-size: 40px;">تماس با ما</h4>
+        <form onsubmit="event.preventDefault(); alert('پیام شما ارسال شد!');" style="display: flex; flex-direction: column; gap: 20px;">
+          <input type="text" placeholder="نام شما" required>
+          <input type="email" placeholder="ایمیل شما" required>
+          <textarea placeholder="پیام شما" required></textarea>
+          <button type="submit">ارسال</button>
+        </form>
+      </div>
+    </div>
+    <p style="margin-top: 2rem; font-size: 20px;">&copy; 2025 سایت معرفی رشته کامپیوتر - تمامی حقوق محفوظ است.</p>
+  </footer>
+
+</body>
+</html>
